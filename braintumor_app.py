@@ -5,7 +5,7 @@
  from PIL import Image, ImageEnhance
  
 
- model = load_model('/content/drive/MyDrive/Models/brain_tumor.h5')
+ model = load_model('brain_tumor.h5')
  
 
  def preprocess_image(image):
