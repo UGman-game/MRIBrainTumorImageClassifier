@@ -42,7 +42,7 @@ def app():
     
     name = st.text_input('Enter Patient name')
     if name:
-        st.write('Patient Name :, ' + name )
+        st.write('Patient Name : ' + name )
     
     uploaded_file = st.file_uploader('Choose an image', type=['jpg', 'jpeg', 'png'])
 
