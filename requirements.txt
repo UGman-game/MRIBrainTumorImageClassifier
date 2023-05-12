@@ -1,3 +1,5 @@
+base64
+os
 tensorflow
 numpy
 pandas
