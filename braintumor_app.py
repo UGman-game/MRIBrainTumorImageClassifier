@@ -1,4 +1,6 @@
 import streamlit as st
+import base64
+import os
 import numpy as np
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.models import load_model
@@ -21,14 +23,18 @@ labels = ['glioma', 'meningioma', 'no tumor', 'pituitary']
  
 
 def app():
+# Set page background image
+    folder_name = "images"
+    file_name = "bg.jpg"
+    image_path = os.path.join(folder_name, file_name)
     page_bg_img = '''
-        <style>
-        body {
-        background-image: url("https://your-image-url.jpg");
-        background-size: cover;
-        }
-        </style>
-        '''
+       <style>
+       body {
+       background-image: url("data:image/png;base64,%s");
+       background-size: cover;
+       }
+       </style>
+    ''' % base64.b64encode(open(image_path, 'rb').read()).decode()
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
     st.title('Brain Tumor Classification')
