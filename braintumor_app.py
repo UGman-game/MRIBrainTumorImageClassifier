@@ -10,7 +10,7 @@ from PIL import Image, ImageEnhance
 
 st.set_page_config(page_title="Brain Tumor Classification", page_icon=":brain:", layout="wide")
 
-model = tf.keras.models.load_model('/content/drive/MyDrive/Models/brain_tumor.h5')
+model = tf.keras.models.load_model('brain_tumor.h5')
 
 # Define the class labels
 class_labels = ['pituitary', 'invalid', 'meningioma', 'glioma']
@@ -33,7 +33,7 @@ def main():
         """
         <style>
         .stApp {
-            background: url('https://i.postimg.cc/QNPYnn1D/braintwo.jpg');
+            background: url('images/braintwo.jpg');
             background-size: cover;
         }
         .stApp > div:first-child {
