@@ -8,6 +8,8 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.models import load_model
 from PIL import Image, ImageEnhance
 
+st.set_page_config(page_title="Brain Tumor Classification", page_icon=":brain:", layout="wide")
+
 model = tf.keras.models.load_model('/content/drive/MyDrive/Models/cnn_braintumor_model.h5')
 
 # Define the class labels
@@ -31,7 +33,7 @@ def main():
         """
         <style>
         .stApp {
-            background: url('https://st2.depositphotos.com/1518767/6951/v/600/depositphotos_69511347-stock-video-brain-spinning-on-black-background.jpg');
+            background: url('https://i.postimg.cc/QNPYnn1D/braintwo.jpg');
             background-size: cover;
         }
         .stApp > div:first-child {
